@@ -1,27 +1,29 @@
-# Mapas
+# Aplicación MapasApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.6.
+Este proyecto ha sido generado con Angular versión 14. 
 
-## Development server
+Esta realizado con la librería `Mapbox`, para su uso se recomiendo los siguientes comandos: 
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Instalar los paquetes de node:
 
-## Code scaffolding
+    npm install
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Para correr localmente el proyecto: 
 
-## Build
+    ng serve -o 
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Visualmente el proyecto tiene el siguiente resultado:
 
-## Running unit tests
+Se puede visualizar en: https://angular-mapasapp.netlify.app/
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+`Ventana Principal`
 
-## Running end-to-end tests
+![imagen1](/src/assets/images/imagen1.PNG)
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+`Búsqueda de Lugares`
 
-## Further help
+![imagen2](/src/assets/images/imagen2.PNG)
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+`Trazado de ruta en dos puntos`
+
+![imagen3](/src/assets/images/imagen3.PNG)
