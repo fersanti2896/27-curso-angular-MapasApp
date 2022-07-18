@@ -59,4 +59,9 @@ export class PlacesService {
         this.mapService.createMarkersFromPlaces(this.places, this.userLocation!);
       });
   }
+
+  /* Metodo que oculta la barra de busqueda */
+  deletePlaces() {
+    this.places = [];
+  }
 }
