@@ -12,7 +12,8 @@
         (click)="flyTo( place )">
         <h6>{{ place.text_es }}</h6>
         <p>{{ place.place_name }}</p>
-        <button [ngClass]="place.id === selectId ? 'btn-outline-light' : 'btn-outline-primary'"
+        <button (click)="getDirections( place )"
+                [ngClass]="place.id === selectId ? 'btn-outline-light' : 'btn-outline-primary'"
                 class="btn btn-sm">
             Direcciones
         </button>
