@@ -7,9 +7,9 @@ import { PlacesRespone, Feature } from '../interfaces/places';
   providedIn: 'root'
 })
 export class PlacesService {
-  public useLocation?: [number, number] = undefined;
+  public useLocation   ?: [number, number] = undefined;
   public isLoadingPlaces: boolean = false;
-  public places: Feature[] = [];
+  public places         : Feature[] = [];
   
   get isUserLocationReady(): boolean {
     return !!this.useLocation;
@@ -29,7 +29,6 @@ export class PlacesService {
         },
         (err) => {
           alert('No se pudo obtener la geocalización');
-          console.log(err);
           reject();
         }
       );
@@ -38,6 +37,13 @@ export class PlacesService {
 
   /* Metodo que busca un lugar */
   getPlacesByQuery( query: string = '' ){
+    if( query.length === 0 ) {
+      this.places = [];
+      this.isLoadingPlaces = false;
+
+      return;
+    }
+
     if( !this.useLocation ) throw Error('No hay useLocation')
 
     this.isLoadingPlaces = true;
@@ -48,7 +54,6 @@ export class PlacesService {
       }
     })
         .subscribe( resp => {
-          console.log(resp.features);
           this.isLoadingPlaces = false;
           this.places          = resp.features;
         });
